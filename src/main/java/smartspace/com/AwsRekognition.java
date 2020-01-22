@@ -47,7 +47,6 @@ public class AwsRekognition {
 				.withExternalImageId(photo + ".png").withDetectionAttributes("DEFAULT");
 
 		rekognitionClient.indexFaces(indexFacesRequest);
-
 	}
 
 	public void DeleteFacesFromCollection(UserEntity user) {
