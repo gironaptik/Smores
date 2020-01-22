@@ -45,7 +45,6 @@ public class AwsRekognition {
 		IndexFacesRequest indexFacesRequest = new IndexFacesRequest().withImage(image)
 				.withQualityFilter(QualityFilter.AUTO).withMaxFaces(1).withCollectionId(collectionId)
 				.withExternalImageId(photo + ".png").withDetectionAttributes("DEFAULT");
-
 		rekognitionClient.indexFaces(indexFacesRequest);
 	}
 
