@@ -31,8 +31,7 @@ public class AwsRekognition {
 	final String collectionId2 = "smores-logedIn";
 	final String bucket = "smores-users";
 
-	BasicAWSCredentials awsCredentials = new BasicAWSCredentials(System.getenv("AWS_KEY"),
-			System.getenv("AWS_SECRET"));
+	BasicAWSCredentials awsCredentials = new BasicAWSCredentials(System.getenv("AWS_KEY"), System.getenv("AWS_SECRET"));
 	AmazonRekognition rekognitionClient = AmazonRekognitionClientBuilder.standard()
 			.withCredentials(new AWSStaticCredentialsProvider(awsCredentials)).withRegion(Regions.US_WEST_2).build();
 
@@ -46,9 +45,9 @@ public class AwsRekognition {
 		IndexFacesRequest indexFacesRequest = new IndexFacesRequest().withImage(image)
 				.withQualityFilter(QualityFilter.AUTO).withMaxFaces(1).withCollectionId(collectionId)
 				.withExternalImageId(photo + ".png").withDetectionAttributes("DEFAULT");
-		
-        IndexFacesResult indexFacesResult = rekognitionClient.indexFaces(indexFacesRequest);
-		
+
+		rekognitionClient.indexFaces(indexFacesRequest);
+
 	}
 
 	public void DeleteFacesFromCollection(UserEntity user) {
@@ -65,8 +64,8 @@ public class AwsRekognition {
 
 		DeleteFacesRequest deleteFacesRequest = new DeleteFacesRequest().withCollectionId(collectionId2)
 				.withFaceIds(searchFacesByImageResult.getFaceMatches().get(0).getFace().getFaceId());
-		
-	    DeleteFacesResult deleteFacesResult=rekognitionClient.deleteFaces(deleteFacesRequest);
+
+		rekognitionClient.deleteFaces(deleteFacesRequest);
 
 	}
 }
