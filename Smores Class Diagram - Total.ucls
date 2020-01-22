@@ -1,0 +1,1740 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.4" icons="true" automaticImage="PNG" always-add-relationships="true" generalizations="true" 
+  realizations="true" associations="false" dependencies="true" nesting-relationships="false" router="FAN">  
+  <package id="1" language="java" name="smartspace" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="255" width="420" x="288" y="104"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="2" language="java" name="smartspace.AppProperties" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/AppProperties.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="393" y="258"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="smartspace.Application" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/Application.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="589" y="231"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="4" language="java" name="smartspace.com" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/com" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="295" width="320" x="872" y="109"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="5" language="java" name="smartspace.com.AwsRekognition" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/com/AwsRekognition.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="223" width="277" x="897" y="175"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="6" language="java" name="smartspace.dao" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/dao" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="888" width="1352" x="1288" y="93"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <interface id="7" language="java" name="smartspace.dao.EnhancedUserDao" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/dao/EnhancedUserDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1965" y="811"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="8" language="java" name="smartspace.dao.ActionDao" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/dao/ActionDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1442" y="535"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="9" language="java" name="smartspace.dao.EnhancedElementDao" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/dao/EnhancedElementDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2403" y="801"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="10" language="java" name="smartspace.dao.UserDao" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/dao/UserDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1744" y="551"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="11" language="java" name="smartspace.dao.ActionDaoImpl" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/dao/ActionDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1442" y="259"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="smartspace.dao.UserDaoImpl" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/dao/UserDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1752" y="275"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="smartspace.dao.ElementDaoImpl" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/dao/ElementDaoImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2048" y="306"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="14" language="java" name="smartspace.dao.ElementDao" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/dao/ElementDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2058" y="575"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="15" language="java" name="smartspace.dao.EnhancedActionDao" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/dao/EnhancedActionDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1538" y="811"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <package id="16" language="java" name="smartspace.dao.rdb" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/dao/rdb" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="1002" width="1377" x="1289" y="1011"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <interface id="17" language="java" name="smartspace.dao.rdb.ElementCrud" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/dao/rdb/ElementCrud.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1893" y="1520"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="false">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="18" language="java" name="smartspace.dao.rdb.MapToJsonConverter" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/dao/rdb/MapToJsonConverter.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1473" y="1161"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="19" language="java" name="smartspace.dao.rdb.GenericIdGeneratorCrud" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/dao/rdb/GenericIdGeneratorCrud.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1453" y="1659"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="20" language="java" name="smartspace.dao.rdb.RdbElementDao" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/dao/rdb/RdbElementDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1880" y="1261"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="21" language="java" name="smartspace.dao.rdb.UserCrud" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/dao/rdb/UserCrud.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1482" y="1318"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="22" language="java" name="smartspace.dao.rdb.GenericIdGenerator" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/dao/rdb/GenericIdGenerator.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1469" y="1513"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="smartspace.dao.rdb.RdbUserDao" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/dao/rdb/RdbUserDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1904" y="1796"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="24" language="java" name="smartspace.dao.rdb.ActionCrud" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/dao/rdb/ActionCrud.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2375" y="1520"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="25" language="java" name="smartspace.dao.rdb.RdbActionDao" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/dao/rdb/RdbActionDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2388" y="1239"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="26" language="java" name="smartspace.data" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/data" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="1080" width="1351" x="-181" y="458"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="27" language="java" name="smartspace.data.ActionEntity" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/data/ActionEntity.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="606" y="851"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="smartspace.data.Location" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/data/Location.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-37" y="1379"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="smartspace.data.ElementEntity" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/data/ElementEntity.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="124" y="860"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="30" language="java" name="smartspace.data.UserRole" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/data/UserRole.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="922" y="1316"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <interface id="31" language="java" name="smartspace.data.SmartSpaceEntity" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/data/SmartSpaceEntity.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="488" y="1298"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="32" language="java" name="smartspace.data.UserEntity" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/data/UserEntity.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1002" y="752"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="33" language="java" name="smartspace.data.util" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/data/util" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="418" width="688" x="556" y="1590"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="34" language="java" name="smartspace.data.util.EntityFactoryImpl" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/data/util/EntityFactoryImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="912" y="1744"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="35" language="java" name="smartspace.data.util.EntityFactory" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/data/util/EntityFactory.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="912" y="1912"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <package id="36" language="java" name="smartspace.infra" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/infra" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="634" width="1797" x="-1258" y="1584"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="37" language="java" name="smartspace.infra.ElementServiceImpl" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/infra/ElementServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-938" y="1786"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="38" language="java" name="smartspace.infra.ActionServiceImpl" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/infra/ActionServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-259" y="1759"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="39" language="java" name="smartspace.infra.UserServiceImpl" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/infra/UserServiceImpl.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="341" y="1777"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="40" language="java" name="smartspace.infra.ActionService" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/infra/ActionService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-433" y="2035"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="41" language="java" name="smartspace.infra.UserService" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/infra/UserService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="341" y="2062"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="42" language="java" name="smartspace.infra.ElementService" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/infra/ElementService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-999" y="2071"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <package id="43" language="java" name="smartspace.layout" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/layout" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="1134" width="1401" x="585" y="2034"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="44" language="java" name="smartspace.layout.BoundaryEmailKey" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/layout/BoundaryEmailKey.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1066" y="3016"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="45" language="java" name="smartspace.layout.ActionController" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/layout/ActionController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="838" y="2140"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="46" language="java" name="smartspace.layout.NewUserForm" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/layout/NewUserForm.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1787" y="2534"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="47" language="java" name="smartspace.layout.UserBoundary" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/layout/UserBoundary.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1481" y="2551"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="48" language="java" name="smartspace.layout.ActionBoundary" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/layout/ActionBoundary.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="831" y="2560"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="49" language="java" name="smartspace.layout.LocationBoundary" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/layout/LocationBoundary.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1311" y="3016"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="50" language="java" name="smartspace.layout.BoundaryIdKey" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/layout/BoundaryIdKey.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="788" y="3016"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="51" language="java" name="smartspace.layout.ElementBoundary" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/layout/ElementBoundary.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1170" y="2614"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="52" language="java" name="smartspace.layout.ElementController" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/layout/ElementController.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1306" y="2194"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="53" language="java" name="smartspace.layout.UserController" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/layout/UserController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1767" y="2158"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="54" language="java" name="smartspace.plugin" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/plugin" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="364" width="1134" x="-898" y="2246"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <interface id="55" language="java" name="smartspace.plugin.Plugin" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/plugin/Plugin.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-551" y="2514"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="56" language="java" name="smartspace.plugin.ChargePlugin" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/plugin/ChargePlugin.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-652" y="2396"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="57" language="java" name="smartspace.plugin.CheckInPlugin" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/plugin/CheckInPlugin.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-94" y="2400"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="58" language="java" name="smartspace.plugin.CheckOutPlugin" project="Smores.smartspace" 
+    file="/Smores.smartspace/src/main/java/smartspace/plugin/CheckOutPlugin.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-88" y="2528"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <dependency id="59">    
+    <end type="SOURCE" refId="52"/>    
+    <end type="TARGET" refId="51"/>  
+  </dependency>  
+  <dependency id="60">    
+    <end type="SOURCE" refId="53"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <association id="61">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="62" name="userCrud">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="63" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="64">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="7"/>  
+  </realization>  
+  <association id="65">    
+    <end type="SOURCE" refId="32" navigable="false">      
+      <attribute id="66" name="role">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="67" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="68">    
+    <end type="SOURCE" refId="58" navigable="false">      
+      <attribute id="69" name="actions">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="70" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="71">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <association id="72">    
+    <end type="SOURCE" refId="39" navigable="false">      
+      <attribute id="73" name="appProperties">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="74" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="75">    
+    <end type="SOURCE" refId="37"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <association id="76">    
+    <end type="SOURCE" refId="37" navigable="false">      
+      <attribute id="77" name="userDao">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="78" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="79">    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="80" name="genericIdGeneratorCrud">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="81" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="82">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <dependency id="83">    
+    <end type="SOURCE" refId="43"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <dependency id="84">    
+    <end type="SOURCE" refId="54"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <dependency id="85">    
+    <end type="SOURCE" refId="43"/>    
+    <end type="TARGET" refId="26"/>  
+  </dependency>  
+  <association id="86">    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="87" name="elementCrud">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="88" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="89">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="28"/>  
+  </dependency>  
+  <dependency id="90">    
+    <end type="SOURCE" refId="47"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <realization id="91">    
+    <end type="SOURCE" refId="57"/>    
+    <end type="TARGET" refId="55"/>  
+  </realization>  
+  <dependency id="92">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <dependency id="93">    
+    <end type="SOURCE" refId="33"/>    
+    <end type="TARGET" refId="29"/>  
+  </dependency>  
+  <dependency id="94">    
+    <end type="SOURCE" refId="54"/>    
+    <end type="TARGET" refId="29"/>  
+  </dependency>  
+  <dependency id="95">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="30"/>  
+  </dependency>  
+  <association id="96">    
+    <end type="SOURCE" refId="57" navigable="false">      
+      <attribute id="97" name="elements">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="98" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="99">    
+    <end type="SOURCE" refId="43"/>    
+    <end type="TARGET" refId="40"/>  
+  </dependency>  
+  <dependency id="100">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="26"/>  
+  </dependency>  
+  <dependency id="101">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <dependency id="102">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="55"/>  
+  </dependency>  
+  <dependency id="103">    
+    <end type="SOURCE" refId="53"/>    
+    <end type="TARGET" refId="47"/>  
+  </dependency>  
+  <association id="104">    
+    <end type="SOURCE" refId="51" navigable="false">      
+      <attribute id="105" name="creator">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="106" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="44" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="107">    
+    <end type="SOURCE" refId="33"/>    
+    <end type="TARGET" refId="26"/>  
+  </dependency>  
+  <dependency id="108">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <association id="109">    
+    <end type="SOURCE" refId="58" navigable="false">      
+      <attribute id="110" name="users">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="111" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="112">    
+    <end type="SOURCE" refId="52" navigable="false">      
+      <attribute id="113" name="userService">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="114" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="41" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="115">    
+    <bendpoint x="666" y="2366"/>    
+    <end type="SOURCE" refId="45"/>    
+    <end type="TARGET" refId="50"/>  
+  </dependency>  
+  <dependency id="116">    
+    <end type="SOURCE" refId="54"/>    
+    <end type="TARGET" refId="4"/>  
+  </dependency>  
+  <dependency id="117">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <dependency id="118">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="29"/>  
+  </dependency>  
+  <dependency id="119">    
+    <end type="SOURCE" refId="55"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <dependency id="120">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <dependency id="121">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <association id="122">    
+    <end type="SOURCE" refId="37" navigable="false">      
+      <attribute id="123" name="elementDao">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="124" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="125">    
+    <end type="SOURCE" refId="46"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <dependency id="126">    
+    <end type="SOURCE" refId="43"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <dependency id="127">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="22"/>  
+  </dependency>  
+  <dependency id="128">    
+    <end type="SOURCE" refId="57"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <dependency id="129">    
+    <end type="SOURCE" refId="38"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <dependency id="130">    
+    <end type="SOURCE" refId="43"/>    
+    <end type="TARGET" refId="41"/>  
+  </dependency>  
+  <dependency id="131">    
+    <end type="SOURCE" refId="54"/>    
+    <end type="TARGET" refId="26"/>  
+  </dependency>  
+  <dependency id="132">    
+    <end type="SOURCE" refId="33"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <dependency id="133">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="28"/>  
+  </dependency>  
+  <dependency id="134">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <association id="135">    
+    <end type="SOURCE" refId="58" navigable="false">      
+      <attribute id="136" name="collection">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="137" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="138">    
+    <end type="SOURCE" refId="29" navigable="false">      
+      <attribute id="139" name="location">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="140" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="28" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="141">    
+    <end type="SOURCE" refId="35"/>    
+    <end type="TARGET" refId="30"/>  
+  </dependency>  
+  <association id="142">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="143" name="elements">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="144" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="29" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="145">    
+    <end type="SOURCE" refId="54"/>    
+    <end type="TARGET" refId="15"/>  
+  </dependency>  
+  <dependency id="146">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="29"/>  
+  </dependency>  
+  <dependency id="147">    
+    <end type="SOURCE" refId="33"/>    
+    <end type="TARGET" refId="30"/>  
+  </dependency>  
+  <dependency id="148">    
+    <end type="SOURCE" refId="43"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <dependency id="149">    
+    <end type="SOURCE" refId="42"/>    
+    <end type="TARGET" refId="29"/>  
+  </dependency>  
+  <realization id="150">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="14"/>  
+  </realization>  
+  <dependency id="151">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <association id="152">    
+    <end type="SOURCE" refId="57" navigable="false">      
+      <attribute id="153" name="collection">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="154" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="155">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="156" name="users">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="157" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="158">    
+    <end type="SOURCE" refId="35"/>    
+    <end type="TARGET" refId="28"/>  
+  </dependency>  
+  <dependency id="159">    
+    <end type="SOURCE" refId="48"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <dependency id="160">    
+    <end type="SOURCE" refId="43"/>    
+    <end type="TARGET" refId="42"/>  
+  </dependency>  
+  <dependency id="161">    
+    <end type="SOURCE" refId="39"/>    
+    <end type="TARGET" refId="30"/>  
+  </dependency>  
+  <dependency id="162">    
+    <end type="SOURCE" refId="47"/>    
+    <end type="TARGET" refId="46"/>  
+  </dependency>  
+  <dependency id="163">    
+    <end type="SOURCE" refId="35"/>    
+    <end type="TARGET" refId="29"/>  
+  </dependency>  
+  <dependency id="164">    
+    <end type="SOURCE" refId="43"/>    
+    <end type="TARGET" refId="36"/>  
+  </dependency>  
+  <realization id="165">    
+    <end type="SOURCE" refId="39"/>    
+    <end type="TARGET" refId="41"/>  
+  </realization>  
+  <dependency id="166">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <dependency id="167">    
+    <end type="SOURCE" refId="51"/>    
+    <end type="TARGET" refId="28"/>  
+  </dependency>  
+  <association id="168">    
+    <end type="SOURCE" refId="47" navigable="false">      
+      <attribute id="169" name="role">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="170" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="171">    
+    <end type="SOURCE" refId="54"/>    
+    <end type="TARGET" refId="14"/>  
+  </dependency>  
+  <association id="172">    
+    <end type="SOURCE" refId="51" navigable="false">      
+      <attribute id="173" name="latlng">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="174" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="49" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="175">    
+    <end type="SOURCE" refId="35"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <association id="176">    
+    <end type="SOURCE" refId="51" navigable="false">      
+      <attribute id="177" name="key">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="178" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="50" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="179">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <realization id="180">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="35"/>  
+  </realization>  
+  <association id="181">    
+    <end type="SOURCE" refId="39" navigable="false">      
+      <attribute id="182" name="userDao">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="183" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="184">    
+    <end type="SOURCE" refId="38"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <dependency id="185">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <association id="186">    
+    <end type="SOURCE" refId="45" navigable="false">      
+      <attribute id="187" name="actionService">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="188" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="40" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="189">    
+    <end type="SOURCE" refId="56"/>    
+    <end type="TARGET" refId="55"/>  
+  </realization>  
+  <dependency id="190">    
+    <end type="SOURCE" refId="56"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <dependency id="191">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <dependency id="192">    
+    <end type="SOURCE" refId="54"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <dependency id="193">    
+    <bendpoint x="978" y="1270"/>    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <association id="194">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="195" name="actions">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="196" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="27" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="197">    
+    <end type="SOURCE" refId="57"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <dependency id="198">    
+    <end type="SOURCE" refId="42"/>    
+    <end type="TARGET" refId="30"/>  
+  </dependency>  
+  <dependency id="199">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <generalization id="200">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="14"/>  
+  </generalization>  
+  <realization id="201">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="15"/>  
+  </realization>  
+  <association id="202">    
+    <end type="SOURCE" refId="58" navigable="false">      
+      <attribute id="203" name="userService">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="204" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="41" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="205">    
+    <end type="SOURCE" refId="47" navigable="false">      
+      <attribute id="206" name="key">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="207" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="44" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="208">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="18"/>  
+  </dependency>  
+  <dependency id="209">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="26"/>  
+  </dependency>  
+  <association id="210">    
+    <end type="SOURCE" refId="53" navigable="false">      
+      <attribute id="211" name="userService">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="212" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="41" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="213">    
+    <end type="SOURCE" refId="58"/>    
+    <end type="TARGET" refId="29"/>  
+  </dependency>  
+  <dependency id="214">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="28"/>  
+  </dependency>  
+  <dependency id="215">    
+    <end type="SOURCE" refId="54"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <association id="216">    
+    <bendpoint x="1222" y="1378"/>    
+    <end type="SOURCE" refId="20" navigable="false">      
+      <attribute id="217" name="appProperties">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="218" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="219">    
+    <end type="SOURCE" refId="58"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <dependency id="220">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="29"/>  
+  </dependency>  
+  <dependency id="221">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="29"/>  
+  </dependency>  
+  <realization id="222">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="10"/>  
+  </realization>  
+  <dependency id="223">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <association id="224">    
+    <end type="SOURCE" refId="56" navigable="false">      
+      <attribute id="225" name="users">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="226" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="227">    
+    <end type="SOURCE" refId="58"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <association id="228">    
+    <end type="SOURCE" refId="48" navigable="false">      
+      <attribute id="229" name="element">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="230" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="50" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="231">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="30"/>  
+  </dependency>  
+  <dependency id="232">    
+    <end type="SOURCE" refId="38"/>    
+    <end type="TARGET" refId="55"/>  
+  </dependency>  
+  <dependency id="233">    
+    <end type="SOURCE" refId="57"/>    
+    <end type="TARGET" refId="29"/>  
+  </dependency>  
+  <association id="234">    
+    <end type="SOURCE" refId="38" navigable="false">      
+      <attribute id="235" name="appProperties">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="236" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="237">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="29"/>  
+  </dependency>  
+  <dependency id="238">    
+    <end type="SOURCE" refId="37"/>    
+    <end type="TARGET" refId="29"/>  
+  </dependency>  
+  <dependency id="239">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <association id="240">    
+    <end type="SOURCE" refId="38" navigable="false">      
+      <attribute id="241" name="elementDao">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="242" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="243">    
+    <end type="SOURCE" refId="37" navigable="false">      
+      <attribute id="244" name="appProperties">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="245" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="246">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <dependency id="247">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <association id="248">    
+    <end type="SOURCE" refId="57" navigable="false">      
+      <attribute id="249" name="actions">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="250" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="251">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="28"/>  
+  </dependency>  
+  <association id="252">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="253" name="appProperties">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="254" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="255">    
+    <end type="SOURCE" refId="56" navigable="false">      
+      <attribute id="256" name="elements">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="257" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="258">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <dependency id="259">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="29"/>  
+  </dependency>  
+  <dependency id="260">    
+    <bendpoint x="1637" y="2366"/>    
+    <end type="SOURCE" refId="53"/>    
+    <end type="TARGET" refId="46"/>  
+  </dependency>  
+  <dependency id="261">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="30"/>  
+  </dependency>  
+  <realization id="262">    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="31"/>  
+  </realization>  
+  <dependency id="263">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="22"/>  
+  </dependency>  
+  <dependency id="264">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="30"/>  
+  </dependency>  
+  <dependency id="265">    
+    <end type="SOURCE" refId="54"/>    
+    <end type="TARGET" refId="41"/>  
+  </dependency>  
+  <dependency id="266">    
+    <end type="SOURCE" refId="45"/>    
+    <end type="TARGET" refId="48"/>  
+  </dependency>  
+  <association id="267">    
+    <end type="SOURCE" refId="58" navigable="false">      
+      <attribute id="268" name="elements">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="269" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="270">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="271" name="genericIdGeneratorCrud">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="272" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="273">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="30"/>  
+  </dependency>  
+  <dependency id="274">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="26"/>  
+  </dependency>  
+  <dependency id="275">    
+    <end type="SOURCE" refId="35"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <dependency id="276">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="28"/>  
+  </dependency>  
+  <association id="277">    
+    <end type="SOURCE" refId="48" navigable="false">      
+      <attribute id="278" name="actionKey">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="279" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="50" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="280">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <dependency id="281">    
+    <end type="SOURCE" refId="52"/>    
+    <end type="TARGET" refId="29"/>  
+  </dependency>  
+  <dependency id="282">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="4"/>  
+  </dependency>  
+  <dependency id="283">    
+    <end type="SOURCE" refId="54"/>    
+    <end type="TARGET" refId="5"/>  
+  </dependency>  
+  <dependency id="284">    
+    <end type="SOURCE" refId="38"/>    
+    <end type="TARGET" refId="30"/>  
+  </dependency>  
+  <association id="285">    
+    <end type="SOURCE" refId="46" navigable="false">      
+      <attribute id="286" name="role">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="287" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="288">    
+    <end type="SOURCE" refId="43"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <dependency id="289">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <dependency id="290">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <dependency id="291">    
+    <end type="SOURCE" refId="51"/>    
+    <end type="TARGET" refId="29"/>  
+  </dependency>  
+  <dependency id="292">    
+    <end type="SOURCE" refId="45"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <dependency id="293">    
+    <end type="SOURCE" refId="40"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <realization id="294">    
+    <end type="SOURCE" refId="38"/>    
+    <end type="TARGET" refId="40"/>  
+  </realization>  
+  <association id="295">    
+    <end type="SOURCE" refId="47" navigable="false">      
+      <attribute id="296" name="appProperties">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="297" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="298">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="28"/>  
+  </dependency>  
+  <dependency id="299">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <dependency id="300">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="15"/>  
+  </dependency>  
+  <dependency id="301">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="29"/>  
+  </dependency>  
+  <realization id="302">    
+    <end type="SOURCE" refId="37"/>    
+    <end type="TARGET" refId="42"/>  
+  </realization>  
+  <dependency id="303">    
+    <end type="SOURCE" refId="33"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <realization id="304">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="9"/>  
+  </realization>  
+  <dependency id="305">    
+    <end type="SOURCE" refId="54"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <association id="306">    
+    <end type="SOURCE" refId="48" navigable="false">      
+      <attribute id="307" name="player">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="308" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="44" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="309">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <dependency id="310">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <dependency id="311">    
+    <end type="SOURCE" refId="54"/>    
+    <end type="TARGET" refId="9"/>  
+  </dependency>  
+  <dependency id="312">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="22"/>  
+  </dependency>  
+  <dependency id="313">    
+    <end type="SOURCE" refId="43"/>    
+    <end type="TARGET" refId="30"/>  
+  </dependency>  
+  <generalization id="314">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <dependency id="315">    
+    <end type="SOURCE" refId="54"/>    
+    <end type="TARGET" refId="36"/>  
+  </dependency>  
+  <association id="316">    
+    <end type="SOURCE" refId="57" navigable="false">      
+      <attribute id="317" name="userService">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="318" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="41" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="319">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="18"/>  
+  </dependency>  
+  <dependency id="320">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="15"/>  
+  </dependency>  
+  <association id="321">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="322" name="actionCrud">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="323" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="24" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="324">    
+    <end type="SOURCE" refId="37"/>    
+    <end type="TARGET" refId="30"/>  
+  </dependency>  
+  <dependency id="325">    
+    <end type="SOURCE" refId="54"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <dependency id="326">    
+    <end type="SOURCE" refId="56"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <dependency id="327">    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="18"/>  
+  </dependency>  
+  <dependency id="328">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="29"/>  
+  </dependency>  
+  <dependency id="329">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <dependency id="330">    
+    <end type="SOURCE" refId="39"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <realization id="331">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="31"/>  
+  </realization>  
+  <association id="332">    
+    <end type="SOURCE" refId="38" navigable="false">      
+      <attribute id="333" name="userDao">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="334" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="335">    
+    <end type="SOURCE" refId="38" navigable="false">      
+      <attribute id="336" name="actionDao">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="337" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="338">    
+    <end type="SOURCE" refId="36"/>    
+    <end type="TARGET" refId="54"/>  
+  </dependency>  
+  <dependency id="339">    
+    <end type="SOURCE" refId="56"/>    
+    <end type="TARGET" refId="29"/>  
+  </dependency>  
+  <association id="340">    
+    <end type="SOURCE" refId="39" navigable="false">      
+      <attribute id="341" name="collection">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="342" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="343">    
+    <end type="SOURCE" refId="52"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <dependency id="344">    
+    <end type="SOURCE" refId="43"/>    
+    <end type="TARGET" refId="28"/>  
+  </dependency>  
+  <dependency id="345">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="26"/>  
+  </dependency>  
+  <realization id="346">    
+    <end type="SOURCE" refId="32"/>    
+    <end type="TARGET" refId="31"/>  
+  </realization>  
+  <association id="347">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="348" name="appProperties">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="349" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="350">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
+  <dependency id="351">    
+    <bendpoint x="1020" y="1430"/>    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <dependency id="352">    
+    <end type="SOURCE" refId="33"/>    
+    <end type="TARGET" refId="28"/>  
+  </dependency>  
+  <association id="353">    
+    <end type="SOURCE" refId="52" navigable="false">      
+      <attribute id="354" name="elementService">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="355" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="42" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="356">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <association id="357">    
+    <end type="SOURCE" refId="57" navigable="false">      
+      <attribute id="358" name="users">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="359" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="360">    
+    <end type="SOURCE" refId="58"/>    
+    <end type="TARGET" refId="55"/>  
+  </realization>  
+  <dependency id="361">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="30"/>  
+  </dependency>  
+  <generalization id="362">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="8"/>  
+  </generalization>  
+  <dependency id="363">    
+    <end type="SOURCE" refId="43"/>    
+    <end type="TARGET" refId="29"/>  
+  </dependency>  
+  <dependency id="364">    
+    <bendpoint x="995" y="2366"/>    
+    <end type="SOURCE" refId="52"/>    
+    <end type="TARGET" refId="50"/>  
+  </dependency>  
+  <dependency id="365">    
+    <end type="SOURCE" refId="34"/>    
+    <end type="TARGET" refId="30"/>  
+  </dependency>  
+  <dependency id="366">    
+    <end type="SOURCE" refId="41"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="false" package="true" protected="true" private="false" static="true"/>    
+    <operations public="false" package="true" protected="true" private="false" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

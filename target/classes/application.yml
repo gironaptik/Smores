@@ -1,0 +1,8 @@
+spring:
+  profiles: development
+  application:
+    name: Smores
+amazon:
+  aws:
+    access-key-id: AKIAW4X7O7XB4MJLUDDT
+    access-key-secret: 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
