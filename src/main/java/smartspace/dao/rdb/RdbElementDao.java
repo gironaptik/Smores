@@ -42,7 +42,7 @@ public class RdbElementDao implements EnhancedElementDao<String>{
 	public ElementEntity create(ElementEntity elementEntity) {
 		GenericIdGenerator nextId = 
 				this.genericIdGeneratorCrud.save(new GenericIdGenerator());
-			elementEntity.setKey(Long.toString(nextId.getId()) +"#"+ appProperties.getName());
+			elementEntity.setKey(nextId.getId() +"#"+ appProperties.getName());
 			this.genericIdGeneratorCrud.delete(nextId);
 		if (!this.elementCrud.existsById(elementEntity.getKey())) {
 			 ElementEntity rv = this.elementCrud.save(elementEntity);

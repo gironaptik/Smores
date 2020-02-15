@@ -4,24 +4,28 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 //import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
+//import javax.persistence.Id;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Entity
+//@Entity
+@Document(collection="number_generator")
 public class GenericIdGenerator {
-	private Long id;
+	private String id;
 	
 	public GenericIdGenerator() {
 	}
 
+//	@Id
+//	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	//@GeneratedValue//(strategy=GenerationType.AUTO)
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	//@GeneratedValue//(strategy=GenerationType.AUTO)
-	public Long getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	

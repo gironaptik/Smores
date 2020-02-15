@@ -39,7 +39,7 @@ public class RdbActionDao implements EnhancedActionDao {
 
 		GenericIdGenerator nextId = 
 				this.genericIdGeneratorCrud.save(new GenericIdGenerator());
-			actionEntity.setKey(Long.toString(nextId.getId()) + "#" + appProperties.getName());
+			actionEntity.setKey(nextId.getId() + "#" + appProperties.getName());
 			this.genericIdGeneratorCrud.delete(nextId);
 		if (!this.actionCrud.existsById(actionEntity.getKey())) {
 			ActionEntity rv = this.actionCrud.save(actionEntity);
