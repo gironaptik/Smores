@@ -8,6 +8,7 @@ import smartspace.com.AwsRekognition;
 import smartspace.dao.EnhancedActionDao;
 import smartspace.dao.EnhancedElementDao;
 import smartspace.dao.EnhancedUserDao;
+import smartspace.dao.rdb.RdbActionDao;
 import smartspace.data.ActionEntity;
 import smartspace.data.ElementEntity;
 import smartspace.data.UserEntity;
@@ -18,12 +19,12 @@ public class CheckInPlugin implements Plugin {
 
 	private EnhancedUserDao<String> users;
 	private UserService userService;
-	private EnhancedActionDao actions;
+	private RdbActionDao actions;
 	private EnhancedElementDao<String> elements;
 	private AwsRekognition collection = new AwsRekognition();
 
 	@Autowired
-	public CheckInPlugin(EnhancedUserDao<String> users, UserService userService, EnhancedElementDao<String> elements, EnhancedActionDao actions) {
+	public CheckInPlugin(EnhancedUserDao<String> users, UserService userService, EnhancedElementDao<String> elements, RdbActionDao actions) {
 		this.users = users;
 		this.userService = userService;
 		this.elements = elements;

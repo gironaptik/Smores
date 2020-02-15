@@ -20,7 +20,10 @@ public class AwsRekognition {
 	final String collectionId2 = "smores-logedIn";
 	final String bucket = "smores-users";
 
-	BasicAWSCredentials awsCredentials = new BasicAWSCredentials(System.getenv("AWS_KEY"), System.getenv("AWS_SECRET"));
+//	BasicAWSCredentials awsCredentials = new BasicAWSCredentials(System.getenv("AWS_KEY"),
+//			System.getenv("AWS_SECRET"));
+	BasicAWSCredentials awsCredentials = new BasicAWSCredentials("AKIAW4X7O7XB4MJLUDDT",
+			"EPuxS7YSAXGGAOMJdEoZ+r8QsfqJrqvjXjDQPVOZ");
 	AmazonRekognition rekognitionClient = AmazonRekognitionClientBuilder.standard()
 			.withCredentials(new AWSStaticCredentialsProvider(awsCredentials)).withRegion(Regions.US_WEST_2).build();
 

@@ -48,6 +48,7 @@ public class ActionEntity implements SmartSpaceEntity<String> {
 	public void setActionSmartspace(String actionSmartspace) {
 		this.actionSmartspace = actionSmartspace;
 	}
+	
 	@JsonIgnore
 	public String getActionId() {
 		return actionId;
