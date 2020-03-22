@@ -1,6 +1,8 @@
 package smartspace.infra;
 
 import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -16,6 +18,7 @@ import smartspace.dao.EnhancedActionDao;
 import smartspace.dao.EnhancedElementDao;
 import smartspace.dao.EnhancedUserDao;
 import smartspace.data.ActionEntity;
+import smartspace.data.ElementEntity;
 import smartspace.data.UserRole;
 import smartspace.plugin.Plugin;
 
@@ -95,6 +98,48 @@ public class ActionServiceImpl implements ActionService {
 			throw new RuntimeException(e);
 		}
 	}
+	
+	@Override
+	@Transactional
+	public ActionEntity getActionByTypeAndEmail(int size,int page, String email, String type) {
+		List<ActionEntity> allActionsByTypEntities = actionDao.readActionWithTypeContainingAndEmail("created", email, type, size, page);
+		Collections.sort(allActionsByTypEntities, new Comparator<ActionEntity>() {
+			  @Override
+			  public int compare(ActionEntity u1, ActionEntity u2) {
+			    return u2.getCreationTimestamp().compareTo(u1.getCreationTimestamp());
+			  }
+			});
+		if(allActionsByTypEntities.size()<1)
+			return null;
+		else
+			return allActionsByTypEntities.get(0);
+//		return allActionsByTypEntities;
+	}
+	
+	@Override
+	@Transactional
+	public List<ActionEntity> getActionsList(int size,int page, String email, String type) {
+		Date startDate = getActionByTypeAndEmail(size, page, email, "CheckIn").getCreationTimestamp();
+		Date currentDate = new Date(); 
+		if(getActionByTypeAndEmail(1000, 0, email, "CheckOut") != null) {
+			if(getActionByTypeAndEmail(size, page, email, "CheckOut").getCreationTimestamp().after(startDate)) {
+			currentDate = getActionByTypeAndEmail(size, page, email, "CheckOut").getCreationTimestamp();
+		}
+		} 
+		else {
+			currentDate = new Date();
+		}
+		List<ActionEntity> allActionsByTime = actionDao.readActionAvaiable(startDate, currentDate, size, page);
+		Collections.sort(allActionsByTime, new Comparator<ActionEntity>() {
+			  @Override
+			  public int compare(ActionEntity u1, ActionEntity u2) {
+			    return u2.getCreationTimestamp().compareTo(u1.getCreationTimestamp());
+			  }
+			});
+			return allActionsByTime;
+//		return allActionsByTypEntities;
+	}
+
 
 	private boolean valiadate(ActionEntity entity) {
 		if (entity.getPlayerEmail() != null && entity.getPlayerSmartspace() != null && entity.getElementId() != null
@@ -124,5 +169,6 @@ public class ActionServiceImpl implements ActionService {
 		this.actionDao.deleteById(key);
 		
 	}
+	
 
 }

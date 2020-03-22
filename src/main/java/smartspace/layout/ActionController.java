@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collection;
+import java.util.List;
 import java.util.stream.Collectors;
 
 import javax.imageio.ImageIO;
@@ -24,18 +25,26 @@ import com.github.sarxos.webcam.Webcam;
 
 import smartspace.data.ActionEntity;
 import smartspace.infra.ActionService;
+import smartspace.infra.UserService;
 import smartspace.layout.ActionBoundary;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
 public class ActionController {
 	private ActionService actionService;
+	private UserService userService;
+
 
 	@Autowired
 	public ActionController(ActionService actionService) {
 		this.actionService = actionService;
 	}
 
+	@Autowired
+	public void setUserService(UserService userService) {
+		this.userService = userService;
+	}
+	
 	@RequestMapping(path = "/smartspace/admin/actions/{adminSmartspace}/{adminEmail}", 
 			method = RequestMethod.POST, 
 			consumes = MediaType.APPLICATION_JSON_VALUE, 
@@ -88,5 +97,41 @@ public class ActionController {
 			@PathVariable("key") String key) {
 		this.actionService
 			.deleteByKey(key);
+	}
+	
+	@RequestMapping(
+			path="/smartspace/actions/{userSmartspace}/{userEmail}",
+			method=RequestMethod.GET,
+			produces=MediaType.APPLICATION_JSON_VALUE,
+			params = {"search=type"})
+	public ActionBoundary getAllActionsWithSpecifiedType (
+			@PathVariable("userSmartspace") String userSmartspace,
+			@PathVariable("userEmail") String userEmail,
+			@RequestParam(name="search", required=false) String name,
+			@RequestParam(name="value", required=true) String type,
+			@RequestParam(name="size", required = false, defaultValue = "10000") int size,
+			@RequestParam(name="page", required = false, defaultValue = "0") int page) {
+			userService.login(userEmail, userSmartspace);
+			return new ActionBoundary(this.actionService.getActionByTypeAndEmail(size, page,userEmail, type));
+//			return this.actionService.getAllByType(size, page, type).stream().map(ActionBoundary::new)
+//					.collect(Collectors.toList()).toArray(new ActionBoundary[0]);
+	}
+	
+	@RequestMapping(
+			path="/smartspace/actions/{userSmartspace}/{userEmail}",
+			method=RequestMethod.GET,
+			produces=MediaType.APPLICATION_JSON_VALUE,
+			params = {"search=list"})
+	public ActionBoundary[] getAllActionsWithSpecifiedTimeAndEmailAndType (
+			@PathVariable("userSmartspace") String userSmartspace,
+			@PathVariable("userEmail") String userEmail,
+			@RequestParam(name="search", required=false) String name,
+			@RequestParam(name="value", required=true) String type,
+			@RequestParam(name="size", required = false, defaultValue = "10000") int size,
+			@RequestParam(name="page", required = false, defaultValue = "0") int page) {
+			userService.login(userEmail, userSmartspace);
+//			return new ActionBoundary(this.actionService.getActionsList(size, page,userEmail, type));
+			return this.actionService.getActionsList(size, page, userEmail, type).stream().map(ActionBoundary::new)
+					.collect(Collectors.toList()).toArray(new ActionBoundary[0]);
 	}
 }

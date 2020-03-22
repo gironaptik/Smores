@@ -2,9 +2,9 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>2019B.giron.aptik.smartspace</groupId>
-	<artifactId>2019B.giron.aptik.smartspace</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<groupId>Smores</groupId>
+	<artifactId>Smores</artifactId>
+	<version>0.0.4</version>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -21,18 +21,39 @@
 
 
 	<dependencies>
+	
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-test</artifactId>
+    <version>5.2.4.RELEASE</version>
+    <scope>test</scope>
+</dependency>
 
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-rest-core</artifactId>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13</version>
+			<scope>test</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.9</version>
+		</dependency>
 		<!-- H2 Database -->
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -46,6 +67,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.opencsv</groupId>
+			<artifactId>opencsv</artifactId>
+			<version>4.1</version>
 		</dependency>
 
 		<dependency>
@@ -74,9 +101,9 @@
 
 		<!-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-rekognition -->
 		<dependency>
-		    <groupId>com.amazonaws</groupId>
-		    <artifactId>aws-java-sdk-rekognition</artifactId>
-		    <version>1.11.658</version>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk-rekognition</artifactId>
+			<version>1.11.658</version>
 		</dependency>
 
 
@@ -98,13 +125,15 @@
 			<artifactId>webcam-capture</artifactId>
 			<version>0.3.12</version>
 		</dependency>
-		
+
 		<!-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-s3 -->
 		<dependency>
 			<groupId>com.amazonaws</groupId>
 			<artifactId>aws-java-sdk-s3</artifactId>
-			<version>1.11.470</version>
+			<version>1.11.734</version>
 		</dependency>
+
+
 
 	</dependencies>
 

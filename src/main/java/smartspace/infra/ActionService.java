@@ -11,4 +11,6 @@ public interface ActionService {
 	public List<ActionEntity> getActionUsingPagination(String key, int size, int page);
 	public ActionEntity invoke(ActionEntity newAction);
 	public void deleteByKey(String key);
-}
+	public ActionEntity getActionByTypeAndEmail(int size,int page, String email, String type);
+	public List<ActionEntity> getActionsList(int size,int page, String email, String type);
+	}

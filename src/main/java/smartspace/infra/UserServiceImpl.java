@@ -1,5 +1,6 @@
 package smartspace.infra;
 
+import java.io.FileWriter;
 import java.util.Collection;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -7,6 +8,9 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import com.opencsv.CSVWriter;
+
 import smartspace.AppProperties;
 import smartspace.com.AwsRekognition;
 import smartspace.dao.EnhancedUserDao;
@@ -18,6 +22,8 @@ public class UserServiceImpl implements UserService {
 	private EnhancedUserDao<String> userDao;
 	private AppProperties appProperties;
 	private AwsRekognition collection = new AwsRekognition();
+	private final String key_name = "recommend_1.csv";
+
 
 	@Autowired
 	public UserServiceImpl(EnhancedUserDao<String> userDao, AppProperties appPropertie) {
@@ -27,12 +33,23 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public UserEntity newUser(UserEntity entity) {
+		try {
 		if (valiadate(entity)) {
 			collection.AddFacesToCollection(entity, 1);
+		    CSVWriter writer = new CSVWriter(new FileWriter(key_name, true));
+			//Updating Recommendation system
+		    String[] user = (entity.getUserEmail() + "").split(",");
+		     writer.writeNext(user);
+		     writer.close();
+		     collection.uploadCSV(key_name);
 			return this.userDao.create(entity);
 		} else {
 			throw new RuntimeException("invalid user");
 		}
+	}	catch (Exception e) {
+		throw new RuntimeException(e);
+	}
+		
 	}
 
 	private boolean valiadate(UserEntity entity) {

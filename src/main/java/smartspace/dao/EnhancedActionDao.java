@@ -18,5 +18,10 @@ public interface EnhancedActionDao extends ActionDao{
 	public ActionEntity insert(ActionEntity actionEntity);
 	public void update(ActionEntity update);
 	public void deleteById(String key);
-
+	public List<ActionEntity> readActionWithTypeContainingAndEmail(
+			String sortBy,
+			String email,
+			String type, 
+			int size, 
+			int page);
 }

@@ -127,7 +127,7 @@ public class RdbActionDao implements EnhancedActionDao {
 		return this.actionCrud.findById(actionKey);
 	}
 	
-	
+			
 	@Override
 	@Transactional
 	public ActionEntity insert(ActionEntity actionEntity) {
@@ -145,4 +145,22 @@ public class RdbActionDao implements EnhancedActionDao {
 		this.actionCrud.deleteById(key);
 		
 	}
+	
+	@Override
+	@Transactional(readOnly=true)
+	public List<ActionEntity> readActionWithTypeContainingAndEmail(
+			String sortBy,
+			String email,
+			String type, 
+			int size, 
+			int page) {
+		
+		return this.actionCrud
+				.findAllByActionTypeLikeAndPlayerEmail(
+						type, email,
+						PageRequest.of(page, size, Direction.ASC, sortBy));
+	}
+	
+
+	
 }
