@@ -4,13 +4,12 @@ import java.io.FileWriter;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import org.aspectj.weaver.patterns.IVerificationRequired;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.opencsv.CSVWriter;
 
-import smartspace.com.AwsRekognition;
+import smartspace.com.AwsAndRecommendation;
 import smartspace.dao.EnhancedActionDao;
 import smartspace.dao.EnhancedElementDao;
 import smartspace.dao.EnhancedUserDao;
@@ -28,14 +27,13 @@ public class CheckOutPlugin implements Plugin {
 	private ActionService actionService;
 	private EnhancedActionDao actions;
 	private EnhancedElementDao<String> elements;
-	private AwsRekognition collection = new AwsRekognition();
+	private AwsAndRecommendation collection = new AwsAndRecommendation();
 	private final String key_name = "trx_data.csv";
 
-
 	@Autowired
-	public CheckOutPlugin(EnhancedUserDao<String> users, UserService userService, EnhancedElementDao<String> elements, EnhancedActionDao actions,
-			ActionService actionService) {
-		
+	public CheckOutPlugin(EnhancedUserDao<String> users, UserService userService, EnhancedElementDao<String> elements,
+			EnhancedActionDao actions, ActionService actionService) {
+
 		this.users = users;
 		this.userService = userService;
 		this.elements = elements;
@@ -43,37 +41,46 @@ public class CheckOutPlugin implements Plugin {
 		this.actionService = actionService;
 	}
 
-
 	@Override
 	public ActionEntity process(ActionEntity action) {
-
 		try {
-		    CSVWriter writer = new CSVWriter(new FileWriter(key_name, true));
-			ElementEntity currentElement = this.elements.readById(action.getElementId()+ "#" +action.getElementSmartspace())
-					.orElseThrow(() -> new NullPointerException("Element Doesn't exist"));
-			UserEntity logedinUser = this.users.readById(action.getPlayerEmail()+"#"+action.getPlayerSmartspace())
+			UserEntity logedinUser = this.users.readById(action.getPlayerEmail() + "#" + action.getPlayerSmartspace())
 					.orElseThrow(() -> new NullPointerException("User Doesn't exist"));
+			List<ActionEntity> shoppingList = actionService.getAllActionsBetweenCheckInAndCheckOutByTime(Integer.MAX_VALUE, 0,
+					logedinUser.getUserEmail());
+			ActionEntity relatedCheckInActionEntity = this.actionService.getActionByTypeAndEmail(Integer.MAX_VALUE, 0, logedinUser.getUserEmail(), "CheckIn");
+			if(relatedCheckInActionEntity.getMoreAttributes().containsKey("CheckOut"))
+				throw new RuntimeException("Illegal CheckOut, Client already checked out!");
+			action.getMoreAttributes().put("CheckIn", relatedCheckInActionEntity.getActionId());
+			CSVWriter writer = new CSVWriter(new FileWriter(key_name, true));
+			ElementEntity currentElement = this.elements
+					.readById(action.getElementId() + "#" + action.getElementSmartspace())
+					.orElseThrow(() -> new NullPointerException("Element Doesn't exist"));
+
 			this.userService.login(logedinUser.getUserEmail(), logedinUser.getUserSmartspace());
-			logedinUser.setPoints(0);
-			users.update(logedinUser);
-			collection.DeleteFacesFromCollection(logedinUser);	//Check!
-			this.actions.create(action);
-			currentElement.getMoreAttributes().put("Logout"+action.getActionId(), "User "+ logedinUser.getUserEmail() + " Logout in at "+ LocalDateTime.now());
+			collection.DeleteFacesFromCollection(logedinUser); // Check!
+			action = this.actions.create(action);
+			relatedCheckInActionEntity.getMoreAttributes().put("CheckOut", action.getActionId()); 	////
+
+			currentElement.getMoreAttributes().put("Logout" + action.getActionId(),
+					"User " + logedinUser.getUserEmail() + " Logout in at " + LocalDateTime.now());
 			elements.update(currentElement);
-			List<ActionEntity> list = actionService.getActionsList(300, 0, logedinUser.getUserEmail(), "Charge");
+			this.actions.update(relatedCheckInActionEntity);
 			String products = "";
-			for(ActionEntity productAction : list) {
-				products = products.equals("") ? products = productAction.getElementId().toString() : products + "|" + productAction.getElementId().toString();
+			for (ActionEntity productAction : shoppingList) {
+				products = products.equals("") ? products = productAction.getMoreAttributes().get("Product").toString()
+						: products + "|" + productAction.getMoreAttributes().get("Product").toString();
 			}
-			
-			//Updating Recommendation system
-			String [] recordS = (logedinUser.getUserEmail() + "," + products).split(",");
-		     writer.writeNext(recordS);
-		     writer.close();
-		     collection.uploadCSV(key_name);
-		return action;
+			// Updating Recommendation system
+			if (!products.equals("")) {
+				String[] recordS = (logedinUser.getUserEmail() + "," + products).split(",");
+				writer.writeNext(recordS);
+				writer.close();
+				collection.uploadCSV(key_name);
+			}
+			return action;
 		} catch (Exception e) {
-			throw new RuntimeException(e);
+			throw new RuntimeException("Illegal CheckOut!" + e);
 		}
-}
+	}
 }

@@ -9,9 +9,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
-
-//@Entity
-//@Table(name = "USER")
 @Document(collection="USERS")
 public class UserEntity implements SmartSpaceEntity<String> {
 	
@@ -46,7 +43,6 @@ public class UserEntity implements SmartSpaceEntity<String> {
 		this.userSmartspace = userSmartspace;
 	}
 
-	//@Transient
 	@JsonIgnore
 	public String getUserEmail() {
 		return userEmail;
@@ -85,12 +81,9 @@ public class UserEntity implements SmartSpaceEntity<String> {
 	}
 	
 	@Override
-	//@Id
-	//@Column(name="ID")
 	@org.springframework.data.annotation.Id
 	public String getKey() {
 		return this.key;
-		//return this.userEmail + "#" + this.userSmartspace;
 	}
 
 	@Override

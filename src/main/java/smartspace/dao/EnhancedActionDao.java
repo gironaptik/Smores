@@ -24,4 +24,7 @@ public interface EnhancedActionDao extends ActionDao{
 			String type, 
 			int size, 
 			int page);
+	public List<ActionEntity> readActionsAvailable(Date fromDate, Date toDate, String email, String type, int size, int page);
+	public List<ActionEntity> readAllActionsAvailableByTypeAndTimestamps(Date fromDate, Date toDate, String smartspace, String type, int size, int page);
+	public List<ActionEntity> readAllActionsAvailableByType(String smartspace, String type, int size, int page);
 }

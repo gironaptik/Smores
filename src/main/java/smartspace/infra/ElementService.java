@@ -19,8 +19,6 @@ public interface ElementService {
 
 	public void validateAuthorization(UserRole role);
 
-//	public List<ElementEntity> getAllNearby(int size, int page, double x, double y, double distance);
-
 	public List<ElementEntity> getAllByName(int size,int page,String elementName);
 	
 	public List<ElementEntity> getAllByType(int size,int page,String type);

@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.opencsv.CSVWriter;
 
 import smartspace.AppProperties;
-import smartspace.com.AwsRekognition;
+import smartspace.com.AwsAndRecommendation;
 import smartspace.dao.EnhancedUserDao;
 import smartspace.data.UserEntity;
 import smartspace.data.UserRole;
@@ -21,7 +21,7 @@ import smartspace.data.UserRole;
 public class UserServiceImpl implements UserService {
 	private EnhancedUserDao<String> userDao;
 	private AppProperties appProperties;
-	private AwsRekognition collection = new AwsRekognition();
+	private AwsAndRecommendation collection = new AwsAndRecommendation();
 	private final String key_name = "recommend_1.csv";
 
 
@@ -65,6 +65,17 @@ public class UserServiceImpl implements UserService {
 		} else
 			throw new NoSuchElementException("Your user doesn't exist");
 		return this.userDao.readAll("key", size, page);
+	}
+	
+	@Override
+	public List<UserEntity> getUsersList(String userSmartspace, String userEmail) {
+		if (this.userDao.readById(userEmail +"#"+ userSmartspace).isPresent()) {
+			if (this.userDao.getUserRole(userSmartspace, userEmail) != UserRole.MANAGER) {
+				throw new RuntimeException("You are not allowed to get users");
+			}
+		} else
+			throw new NoSuchElementException("Your user doesn't exist");
+		return this.userDao.readAll();
 	}
 	
 	@Override

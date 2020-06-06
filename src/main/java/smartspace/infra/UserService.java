@@ -14,5 +14,6 @@ public interface UserService {
 	public void update(String userKey, UserEntity user);
 	public void deleteByKey(String key);
 	public void updateWithoutPoints(String userKey, UserEntity user);
+	public List<UserEntity> getUsersList(String userSmartspace, String userEmail);
 
 }

@@ -18,8 +18,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import smartspace.dao.rdb.MapToJsonConverter;
 
 
-//@Entity
-//@Table(name="ELEMENT")
 @Document(collection="ELEMENTS")
 public class ElementEntity implements SmartSpaceEntity<String> {
 
@@ -130,12 +128,9 @@ public class ElementEntity implements SmartSpaceEntity<String> {
 	}
 
 	@Override
-	//@Id
-	//@Column(name="ID")
 	@org.springframework.data.annotation.Id
 	public String getKey() {
 		return this.key;
-		//return this.elementId + "#" + this.elementSmartspace;
 		}
 
 	@Override

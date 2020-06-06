@@ -14,7 +14,6 @@ public interface EnhancedElementDao<Key> extends ElementDao<Key>{
 			Date fromDate, Date toDate,
 			int size, int page);
 	public ElementEntity insert(ElementEntity elementEntity);
-//	public 	List<ElementEntity> readAllByLocationXGreaterThanAndLocationXLessThanAndLocationYGreaterThanAndLocationYLessThan(
-//			Location minLocation, Location maxLocation, int size, int page);
+
 	public void deleteById(String key);
 }

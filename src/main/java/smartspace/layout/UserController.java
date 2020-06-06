@@ -1,4 +1,5 @@
 package smartspace.layout;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.stream.Collectors;
@@ -11,11 +12,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import antlr.collections.List;
 import smartspace.data.UserEntity;
 import smartspace.infra.UserService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
 public class UserController {
 
 	private UserService userService;
@@ -91,6 +93,14 @@ public class UserController {
 			@PathVariable("key") String key) {
 		this.userService
 			.deleteByKey(key);
+	}
+	
+	@RequestMapping(method = RequestMethod.GET, path = "/smartspace/users/amount/{userSmartspace}/{userEmail}", 
+			produces = MediaType.APPLICATION_JSON_VALUE)
+	public int getUsersAmount(
+			@PathVariable("userSmartspace") String userSmartspace,
+			@PathVariable("userEmail") String userEmail){
+return new ArrayList<UserEntity>(this.userService.getUsersList(userSmartspace, userEmail)).size();
 	}
 	
 }

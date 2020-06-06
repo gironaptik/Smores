@@ -7,7 +7,6 @@ import java.util.concurrent.atomic.AtomicLong;
 import smartspace.dao.ElementDao;
 import smartspace.data.ElementEntity;
 
-//@Repository
 public class ElementDaoImpl implements ElementDao<String>{
 	private List<ElementEntity> elements;
 	private AtomicLong nextId;

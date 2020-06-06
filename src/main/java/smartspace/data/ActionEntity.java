@@ -9,8 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import smartspace.dao.rdb.MapToJsonConverter;
 
-//@Entity
-//@Table(name = "ACTIONS")
+
 @Document(collection="ACTIONS")
 public class ActionEntity implements SmartSpaceEntity<String> {
 
@@ -98,7 +97,6 @@ public class ActionEntity implements SmartSpaceEntity<String> {
 		this.actionType = actionType;
 	}
 
-//	@Temporal(TemporalType.TIMESTAMP)
 	public Date getCreationTimestamp() {
 		return creationTimestamp;
 	}
@@ -121,13 +119,10 @@ public class ActionEntity implements SmartSpaceEntity<String> {
 		this.moreAttributes.put(attributeName, attributeObj);
 	}
 
-	//@Column(name = "ID")
-	//@Id
 	@Override
 	@org.springframework.data.annotation.Id
 	public String getKey() {
 		return this.key;
-		//return this.actionId + "#" + this.actionSmartspace;
 	}
 
 	@Override

@@ -24,7 +24,6 @@ public class RdbActionDao implements EnhancedActionDao {
 	private GenericIdGeneratorCrud genericIdGeneratorCrud;
 	private AppProperties appProperties;
 	
-
 	@Autowired
 	public RdbActionDao(ActionCrud actionCrud, GenericIdGeneratorCrud genericIdGeneratorCrud, AppProperties appProperties) {
 		super();
@@ -36,7 +35,6 @@ public class RdbActionDao implements EnhancedActionDao {
 	@Override
 	@Transactional
 	public ActionEntity create(ActionEntity actionEntity) {
-
 		GenericIdGenerator nextId = 
 				this.genericIdGeneratorCrud.save(new GenericIdGenerator());
 			actionEntity.setKey(nextId.getId() + "#" + appProperties.getName());
@@ -87,7 +85,6 @@ public class RdbActionDao implements EnhancedActionDao {
 		List<ActionEntity> rv = new ArrayList<>();
 		// SQL: SELECT
 		this.actionCrud.findAll().forEach(rv::add);
-
 		return rv;
 	}
 
@@ -126,7 +123,6 @@ public class RdbActionDao implements EnhancedActionDao {
 	public Optional<ActionEntity> readById(String actionKey) {
 		return this.actionCrud.findById(actionKey);
 	}
-	
 			
 	@Override
 	@Transactional
@@ -143,7 +139,6 @@ public class RdbActionDao implements EnhancedActionDao {
 	@Override
 	public void deleteById(String key) {
 		this.actionCrud.deleteById(key);
-		
 	}
 	
 	@Override
@@ -161,6 +156,28 @@ public class RdbActionDao implements EnhancedActionDao {
 						PageRequest.of(page, size, Direction.ASC, sortBy));
 	}
 	
-
+	@Override
+	@Transactional(readOnly = true)
+	public List<ActionEntity> readActionsAvailable(Date fromDate, Date toDate, String email, String type, int size, int page) {
+		return this.actionCrud
+				.findAllByCreationTimestampBetweenAndPlayerEmailAndActionType(
+						fromDate, toDate, email, type, PageRequest.of(page, size));
+	}
 	
+	@Override
+	@Transactional(readOnly = true)
+	public List<ActionEntity> readAllActionsAvailableByTypeAndTimestamps(Date fromDate, Date toDate, String smartspace, String type, int size, int page) {
+		return this.actionCrud
+				.findAllByCreationTimestampBetweenAndPlayerSmartspaceAndActionType(
+						fromDate, toDate, smartspace, type, PageRequest.of(page, size));
+	}
+	
+	@Override
+	@Transactional(readOnly = true)
+	public List<ActionEntity> readAllActionsAvailableByType(String smartspace, String type, int size, int page) {
+		return this.actionCrud
+				.findAllByPlayerSmartspaceAndActionType(
+						smartspace, type, PageRequest.of(page, size));
+	}
+
 }

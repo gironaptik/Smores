@@ -7,7 +7,6 @@ import java.util.Optional;
 import smartspace.dao.UserDao;
 import smartspace.data.UserEntity;
 
-//@Repository
 public class UserDaoImpl  implements UserDao<String>  {
 	private List<UserEntity> users;
 	

@@ -24,7 +24,7 @@ public class RdbUserDao implements EnhancedUserDao<String> {
 	private UserCrud userCrud;
 	private AppProperties appProperties;
 	private @Autowired MongoTemplate mongo;
-	private AwsRekognition collection = new AwsRekognition();
+	private AwsAndRecommendation collection = new AwsAndRecommendation();
 	final String data = "trx_data.csv";
 	final String users = "recommend_1.csv";
 

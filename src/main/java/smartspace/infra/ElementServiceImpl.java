@@ -12,7 +12,6 @@ import smartspace.AppProperties;
 import smartspace.dao.EnhancedElementDao;
 import smartspace.dao.EnhancedUserDao;
 import smartspace.data.ElementEntity;
-import smartspace.data.Location;
 import smartspace.data.UserRole;
 
 @Service
@@ -114,17 +113,6 @@ public class ElementServiceImpl implements ElementService {
 			throw new RuntimeException("Only managers are authorized to create new elements");
 		}
 	}
-	
-//	@Override
-//	@Transactional
-//	public List<ElementEntity> getAllNearby(int size, int page, double x, double y, double distance) {
-//		double minX = x - distance;
-//		double maxX = x + distance;
-//		double minY = y - distance;
-//		double maxY = y + distance;
-//			return elementDao.readAllByLocationXGreaterThanAndLocationXLessThanAndLocationYGreaterThanAndLocationYLessThan(
-//					new Location(minX, minY), new Location(maxX, maxY), size, page);
-//		}
 	
 	@Override
 	@Transactional

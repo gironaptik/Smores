@@ -103,10 +103,4 @@ public class UserBoundary {
 		return entity;
 	}
 
-//	@Override
-//	public String toString() {
-//		return "UserTO [email=" + userEmail + ", smartspace=" + userSmartspace + ", username=" + userName + ", avatar=" + avatar
-//				+ ", role=" + role + ", points=" + points + "]";
-//	}
-
 }

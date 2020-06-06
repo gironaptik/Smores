@@ -184,21 +184,7 @@ public class RdbElementDao implements EnhancedElementDao<String>{
 			return elementEntity;
 		}
 	}
-
-
-//	@Override
-//	public List<ElementEntity> readAllByLocationXGreaterThanAndLocationXLessThanAndLocationYGreaterThanAndLocationYLessThan( // mongoDB throws Error while sending 2 locations at one time
-//			Location minLocation, Location maxLocation, int size, int page){
-//		List<ElementEntity> maxList = this.elementCrud.readAllByLocationXLessThanAndLocationYLessThan
-//				(maxLocation.getX(), maxLocation.getY(), PageRequest.of(page, size));
-//		List<ElementEntity> minList = this.elementCrud.readAllByLocationXGreaterThanAndLocationYGreaterThan
-//				(minLocation.getX(), minLocation.getY(), PageRequest.of(page, size));
-//		maxList.stream().filter(c -> minList.contains(c)).collect(Collectors.toList());
-//		return maxList;			
-//	}
-	
-
-	
+		
 	@Override
 	@Transactional(readOnly=true)
 	public List<ElementEntity> readElementWithNameContaining(
@@ -207,7 +193,7 @@ public class RdbElementDao implements EnhancedElementDao<String>{
 			int page) {
 		
 		return this.elementCrud
-				.findAllByNameLike(
+				.findAllByName(
 						name,
 						PageRequest.of(page, size));
 	}

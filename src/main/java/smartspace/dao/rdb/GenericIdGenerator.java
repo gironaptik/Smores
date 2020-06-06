@@ -8,7 +8,6 @@ import javax.persistence.GenerationType;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-//@Entity
 @Document(collection="number_generator")
 public class GenericIdGenerator {
 	private String id;
@@ -16,9 +15,6 @@ public class GenericIdGenerator {
 	public GenericIdGenerator() {
 	}
 
-//	@Id
-//	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	//@GeneratedValue//(strategy=GenerationType.AUTO)
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	public String getId() {

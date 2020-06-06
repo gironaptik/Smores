@@ -24,7 +24,7 @@ import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
 import smartspace.data.UserEntity;
 
-public class AwsRekognition {
+public class AwsAndRecommendation {
 
 	final String collectionId1 = "smores-clients";
 	final String collectionId2 = "smores-logedIn";
@@ -67,7 +67,7 @@ public class AwsRekognition {
 	public void downloadCSV(String file) {
 		final AmazonS3 s3 = AmazonS3ClientBuilder.standard().withCredentials(new AWSStaticCredentialsProvider(awsCredentials)).withRegion(Regions.US_WEST_2).build();
 		try {
-			System.out.println("Downloading" + file + "CSV File....");
+			System.out.println("Downloading " + file + " CSV File....\n");
 		    com.amazonaws.services.s3.model.S3Object o = s3.getObject(recommendationBucketString, file);
 		    S3ObjectInputStream s3is = o.getObjectContent();
 		    FileOutputStream fos = new FileOutputStream(new File(file));

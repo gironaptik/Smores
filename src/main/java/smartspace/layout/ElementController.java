@@ -17,7 +17,6 @@ import smartspace.infra.ElementService;
 import smartspace.infra.UserService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
 public class ElementController {
 	private ElementService elementService;
 	private UserService userService;
@@ -32,7 +31,6 @@ public class ElementController {
 		this.userService = userService;
 	}
 
-	
 	
 	@RequestMapping(
 			path="/smartspace/admin/elements/{adminSmartspace}/{adminEmail}",
@@ -140,25 +138,6 @@ public class ElementController {
 			.toArray(new ElementBoundary[0]);
 	}
 	
-//	@RequestMapping(
-//			path="/smartspace/elements/{userSmartspace}/{userEmail}",
-//			method=RequestMethod.GET,
-//			produces=MediaType.APPLICATION_JSON_VALUE,
-//			params = {"search=location"})
-//	public ElementBoundary[] getAllElementsNearLocation (
-//			@PathVariable("userSmartspace") String userSmartspace,
-//			@PathVariable("userEmail") String userEmail,
-//			@RequestParam(name="search", required=false) String location,
-//			@RequestParam(name="x", required=false, defaultValue="5") int x,
-//			@RequestParam(name="y", required=false, defaultValue="5") int y,
-//			@RequestParam(name="distance", required=false, defaultValue="10") int distance,
-//			@RequestParam(name="size", required = false, defaultValue = "10") int size,
-//			@RequestParam(name="page", required = false, defaultValue = "0") int page) {
-//			userService.login(userEmail, userSmartspace);
-//		return this.elementService.getAllNearby(size, page, x, y, distance).stream().map(ElementBoundary::new)
-//				.collect(Collectors.toList()).toArray(new ElementBoundary[0]);
-//	}
-	
 	@RequestMapping(
 			path="/smartspace/elements/{userSmartspace}/{userEmail}",
 			method=RequestMethod.GET,
@@ -186,7 +165,7 @@ public class ElementController {
 			@PathVariable("userEmail") String userEmail,
 			@RequestParam(name="search", required=false) String name,
 			@RequestParam(name="value", required=true) String type,
-			@RequestParam(name="size", required = false, defaultValue = "10") int size,
+			@RequestParam(name="size", required = false, defaultValue = "100") int size,
 			@RequestParam(name="page", required = false, defaultValue = "0") int page) {
 			userService.login(userEmail, userSmartspace);
 		return this.elementService.getAllByType(size, page, type).stream().map(ElementBoundary::new)

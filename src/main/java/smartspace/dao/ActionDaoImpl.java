@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 import smartspace.data.ActionEntity;
 
-//@Repository
 public class ActionDaoImpl implements ActionDao {
 	private List<ActionEntity> actions;
 	private AtomicLong nextId;
